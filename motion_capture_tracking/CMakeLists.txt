@@ -74,6 +74,7 @@ install(TARGETS motion_capture_tracking_node
 if ((CMAKE_SYSTEM_NAME STREQUAL "Linux") AND (CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64"))
   install(FILES 
     ${CMAKE_CURRENT_SOURCE_DIR}/deps/libmotioncapture/deps/NatNetSDKCrossplatform/lib/ubuntu/libNatNet.so
+    ${CMAKE_CURRENT_SOURCE_DIR}/deps/libmotioncapture/deps/nokov_sdk/lib/x64/libnokov_sdk.so
     DESTINATION lib/${PROJECT_NAME}
   )
 endif()
