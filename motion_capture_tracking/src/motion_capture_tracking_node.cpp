@@ -238,6 +238,10 @@ int main(int argc, char **argv)
     {
       const auto& rigidBody = iter.second;
 
+      // Filter invalid data
+      if (rigidBody.rotation().x() > 99999.f)
+        continue;
+
       // const auto& transform = rigidBody.transformation();
       // transforms.emplace_back(eigenToTransform(transform));
       transforms.resize(transforms.size() + 1);
