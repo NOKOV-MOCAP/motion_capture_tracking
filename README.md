@@ -63,7 +63,7 @@ We recommend that you first try "optitrack" and switch to "optitrack_closed_sour
 
 Since the SDK is not publically available, adding the SDK and building from source is required.
 
-1. Place the SDK in `motion_capture_tracking/deps/libmotioncapture/deps/nokov_sdk` (such that there is for example the file `motion_capture_tracking/deps/libmotioncapture/deps/nokov_sdk/lib/libSeekerSDKClient.so`)
+1. Place the SDK in `motion_capture_tracking/deps/libmotioncapture/deps/nokov_sdk` (such that there is for example the file `motion_capture_tracking/deps/libmotioncapture/deps/nokov_sdk/lib/libnokov_sdk.so`)
 2. In `motion_capture_tracking/CMakeLists.txt` change `set(LIBMOTIONCAPTURE_ENABLE_NOKOV OFF)` to `set(LIBMOTIONCAPTURE_ENABLE_NOKOV ON)`
 3. Rebuild using `colcon build`
 
