@@ -172,7 +172,7 @@ int main(int argc, char **argv)
 
   std::vector<librigidbodytracker::RigidBody> rigidBodies;
   // only add the rigid bodies to the tracker if we are not using the "mock" mode
-  if (motionCaptureType != "mock" && motionCaptureType != "nokov") {
+  if (motionCaptureType != "mock") {
     auto rigid_body_names = extract_names(parameter_overrides, "rigid_bodies");
     for (const auto &name : rigid_body_names)
     {
@@ -233,7 +233,6 @@ int main(int argc, char **argv)
 
     transforms.clear();
     transforms.reserve(mocap->rigidBodies().size());
-    //RCLCPP_WARN(node->get_logger(), "rigidBodies.size %d", mocap->rigidBodies().size());
     for (const auto &iter : mocap->rigidBodies())
     {
       const auto& rigidBody = iter.second;
